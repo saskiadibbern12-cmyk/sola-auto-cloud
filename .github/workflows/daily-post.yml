@@ -1,0 +1,53 @@
+name: SOLA Instagram Auto-Post
+
+on:
+  schedule:
+    # Zeiten in UTC. CEST (Sommer) = UTC+2.
+    - cron: '0 7 * * *'    # 09:00 CEST  (Slot A werktags)
+    - cron: '0 8 * * 6,0'  # 10:00 CEST  (Slot A Sa/So)
+    - cron: '30 10 * * *'  # 12:30 CEST  (Slot B)
+    - cron: '30 16 * * *'  # 18:30 CEST  (Slot C)
+  workflow_dispatch:
+    inputs:
+      force_id:
+        description: 'Post-id sofort testen (z.B. 2), leer = normaler Faelligkeits-Lauf'
+        required: false
+        default: ''
+
+permissions:
+  contents: write   # damit der Workflow den posted-Status zurueck committen darf
+
+jobs:
+  post:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Post faelligen Slot
+        id: post
+        continue-on-error: true
+        env:
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+          FORCE_ID: ${{ github.event.inputs.force_id }}
+        run: python3 scripts/post-instagram.py
+
+      - name: Zustand zurueck committen (posted/error)
+        if: always()
+        run: |
+          git config user.name "sola-bot"
+          git config user.email "actions@github.com"
+          git add queue.json || true
+          git commit -m "state: posted update [skip ci]" || echo "keine Aenderung"
+          git push || echo "nichts zu pushen"
+
+      - name: Fehler weiterreichen (loest GitHub-Fehlermail aus)
+        if: steps.post.outcome == 'failure'
+        run: |
+          echo "::error::Instagram-Post fehlgeschlagen, siehe queue.json error-Feld + Log"
+          exit 1
