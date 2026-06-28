@@ -20,6 +20,7 @@ Fehler -> Exit 1 -> GitHub schickt Fehler-Mail (keine lautlose Stille).
 import os, json, time, ssl, urllib.request, urllib.parse, urllib.error
 from datetime import datetime, timedelta, timezone
 
+# Facebook-LOGIN-Weg: Publishing ueber graph.facebook.com mit dem Page-Token.
 GRAPH = "https://graph.facebook.com/v21.0"
 CTX = ssl.create_default_context()
 REPO_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
