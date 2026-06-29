@@ -15,7 +15,7 @@
    "assets/a01_8.jpg",
    "assets/a01_9.jpg"
   ],
-  "caption": "eine ki, jede farbwelt. von rosé bis gold, von serum bis sneaker.\n\nswipe und sag mir welche farbe zu deiner marke passt.\n\n#aiproductphotography #produktfotografie #beautyeditorial #d2cmarketing #aicreative #kiwerbung",
+  "caption": "kein studio. kein fotograf. ein nachmittag.\n\ndieser hero-shot ist komplett mit ki gebaut , genau so könnte dein produkt im feed aussehen, ohne dass jemand eine kamera anfasst.\n\nkommentiere SET, und ich schick dir, wie so ein look ganz ohne shooting entsteht.\n\n#aiproductphotography #produktfotografie #beautyeditorial #d2cmarketing #aicreative #ecommercedeutschland",
   "approved": true,
   "posted": true,
   "error": null,
@@ -24,161 +24,75 @@
  },
  {
   "id": 2,
-  "datetime": "2026-07-01T12:30:00+02:00",
+  "datetime": "2026-06-30T08:00:00+02:00",
   "type": "carousel",
-  "title": "vorher , nachher",
+  "title": "good vs bad ai",
   "assets": [
-   "assets/a02_1.jpg",
-   "assets/a02_2.jpg",
-   "assets/a02_3.jpg",
-   "assets/a02_4.jpg",
-   "assets/a02_5.jpg"
+   "assets/ed_a1.jpg",
+   "assets/ed_a2.jpg",
+   "assets/ed_a3.jpg"
   ],
-  "caption": "links dein altes produktfoto. rechts was wir draus machen.\n\ngleiches produkt, anderer wert. schick mir deins, ich zeig dir was geht , gratis.\n\n#aiproductphotography #produktfotografie #beautyeditorial #d2cmarketing #aicreative #kiwerbung",
+  "caption": "woran erkennst du, ob ein bild echt ist oder ki?\n\ndie meisten ki-bilder verraten sich in 2 sekunden. wachshaut, totes gesicht, kauderwelsch auf dem label.\n\ngute ki macht das gegenteil: sichtbare poren, echtes catchlight, ein ruhiger unperfekter moment. das ist der ganze unterschied zwischen „sieht ki aus\" und „sieht teuer aus\".\n\nswipe für die 4 merkmale und die 5 roten flaggen. speichern für dein nächstes shooting.\n\nkommentiere ECHT, und ich zeig dir, woran ich es bei deiner kategorie festmache.\n\n(alle bilder mit ki erstellt)\n#aibeauty #aicreative #produktfotografie #kiwerbung #d2cmarketing #beautyeditorial",
   "approved": true,
   "posted": false
  },
  {
   "id": 3,
-  "datetime": "2026-07-02T12:30:00+02:00",
-  "type": "reel",
-  "title": "energy , bewegt",
+  "datetime": "2026-06-30T13:00:00+02:00",
+  "type": "image",
+  "title": "gisou , bottled in light",
   "assets": [
-   "assets/a03_1.mp4"
+   "assets/ed_b.jpg"
   ],
-  "caption": "dein produkt, aber es bewegt sich wie ein grosser spot.\n\nkein dreh, kein team, ein nachmittag. sowas fuer deine marke? schreib mir.\n\n#aivideo #adcreative #kiwerbung #contentcreation #marketingdeutschland #aiugc",
+  "caption": "eine produkt-ad. kein studio, kein fotograf, kein set. ein nachmittag mit ki.\n\ndas hier ist gisou, einfach weil jeder die flasche kennt. genau so könnte deine marke im feed stehen, in licht inszeniert, ohne dass jemand eine kamera anfasst.\n\nkommentiere LICHT, und ich bau dir einen frame mit deinem produkt.\n\n(ki-konzept, keine offizielle gisou-kampagne)\n#aiproductphotography #produktfotografie #beautyads #haircare #aicreative #ecommercedeutschland",
   "approved": true,
   "posted": false
  },
  {
   "id": 4,
-  "datetime": "2026-07-03T12:30:00+02:00",
+  "datetime": "2026-06-30T18:00:00+02:00",
   "type": "image",
-  "title": "emerald serum",
+  "title": "aurélie editorial hero",
   "assets": [
-   "assets/a04_1.jpg"
+   "assets/ed_e.jpg"
   ],
-  "caption": "dein produkt, aber es sieht aus wie eine grosse kampagne.\n\nauch wenn das budget noch klein ist. schick mir ein produktfoto, ich bau dir ein gratis frame.\n\n#aiproductphotography #produktfotografie #beautyeditorial #d2cmarketing #aicreative #kiwerbung",
+  "caption": "editorial beauty, ein modell das es nie gab, licht gefangen im haar.\n\nkein casting, keine gage, kein retusche-marathon. so demokratisiert sich grade magazin-qualität, und genau das verkaufe ich an marken die groß aussehen wollen ohne großes budget.\n\nkommentiere EDITORIAL, und ich zeig dir wie dein look aussehen würde.\n\n(ki-erstellt)\n#aieditorial #beautyeditorial #aimodel #editorial #aicreative #beautymarketing",
   "approved": true,
   "posted": false
  },
  {
   "id": 5,
-  "datetime": "2026-07-04T12:30:00+02:00",
-  "type": "reel",
-  "title": "parfum , lichtmoment",
+  "datetime": "2026-07-01T08:00:00+02:00",
+  "type": "image",
+  "title": "behind the workflow , prompt to result",
   "assets": [
-   "assets/a05_1.mp4"
+   "assets/ed_f.jpg"
   ],
-  "caption": "produktwerbung im vogue-niveau. ohne studio, ohne model-gage.\n\nja, wirklich. magst du sowas fuer dein produkt? schreib mir.\n\n#aivideo #adcreative #kiwerbung #contentcreation #marketingdeutschland #aiugc",
+  "caption": "warum sieht das eine ki-bild glaubwürdig aus und das andere billig? der prompt.\n\n„visible pores, peach fuzz, shot on phone, no airbrush\", genau diese wörter machen den unterschied zwischen fake und echt. das ist die arbeit hinter einem guten frame.\n\nspeichern für später. kommentiere PROMPT, wenn ich meine komplette formel mal zeigen soll.\n\n(ki-konzept)\n#promptengineering #aiworkflow #behindthescenes #aicreative #contentcreation #aibeauty",
   "approved": true,
   "posted": false
  },
  {
   "id": 6,
-  "datetime": "2026-07-05T12:30:00+02:00",
+  "datetime": "2026-07-01T13:00:00+02:00",
   "type": "image",
-  "title": "rosé lippenstift",
+  "title": "gisou , eine ad drei minuten",
   "assets": [
-   "assets/a06_1.jpg"
+   "assets/ed_c.jpg"
   ],
-  "caption": "deine marke verdient werbung die nach geld aussieht.\n\nauch mit kleinem budget. schick mir dein produkt, ich zeig dir die richtung , gratis.\n\n#aiproductphotography #produktfotografie #beautyeditorial #d2cmarketing #aicreative #kiwerbung",
+  "caption": "travertin, warmes fensterlicht, ein tropfen am glas. drei minuten, null studio.\n\nder unterschied zwischen „ki-look\" und editorial ist nur eins: lichtführung. daran arbeite ich, bis die ad aussieht wie eine fünfstellige kampagne.\n\nkommentiere AD, und ich schick dir, wie so ein still für deine marke entsteht.\n\n(ki-konzept)\n#aiproductshot #editorial #beautyads #aicreative #d2cbeauty #produktfotografie",
   "approved": true,
   "posted": false
  },
  {
   "id": 7,
-  "datetime": "2026-07-06T12:30:00+02:00",
-  "type": "reel",
-  "title": "sneaker , bewegung",
-  "assets": [
-   "assets/a07_1.mp4"
-  ],
-  "caption": "stop scrollen wenn deine produktwerbung aussieht wie 2019.\n\nkein vorwurf, es geht nur besser und schneller. schreib mir, ich zeig dirs an deinem produkt.\n\n#aivideo #adcreative #kiwerbung #contentcreation #marketingdeutschland #aiugc",
-  "approved": true,
-  "posted": false
- },
- {
-  "id": 8,
-  "datetime": "2026-07-07T12:30:00+02:00",
+  "datetime": "2026-07-01T18:00:00+02:00",
   "type": "image",
-  "title": "energy , splash",
+  "title": "macro , dopamine drop",
   "assets": [
-   "assets/a08_1.jpg"
+   "assets/ed_d.jpg"
   ],
-  "caption": "klassisch: zwei wochen, viertausend euro. so: zwei tage.\n\ndie rechnung macht gerade jede d2c-marke neu. willst du sie auch? schreib mir.\n\n#aiproductphotography #produktfotografie #beautyeditorial #d2cmarketing #aicreative #kiwerbung",
-  "approved": true,
-  "posted": false
- },
- {
-  "id": 9,
-  "datetime": "2026-07-08T12:30:00+02:00",
-  "type": "reel",
-  "title": "cobalt , bewegt",
-  "assets": [
-   "assets/a09_1.mp4"
-  ],
-  "caption": "nie wieder dreitausend euro fuer ein shooting das in zwei wochen veraltet ist.\n\ncontent der mitwaechst statt einmal teuer. schick mir dein produkt, ich mach dir eine probe.\n\n#aivideo #adcreative #kiwerbung #contentcreation #marketingdeutschland #aiugc",
-  "approved": true,
-  "posted": false
- },
- {
-  "id": 10,
-  "datetime": "2026-07-09T12:30:00+02:00",
-  "type": "image",
-  "title": "cobalt flacon",
-  "assets": [
-   "assets/a10_1.jpg"
-  ],
-  "caption": "ruhig, teuer, premium , so sieht deine marke aus wenn sie nach geld aussieht.\n\nund das geht auch klein. schreib mir, ich bau dir ein gratis frame.\n\n#aiproductphotography #produktfotografie #beautyeditorial #d2cmarketing #aicreative #kiwerbung",
-  "approved": true,
-  "posted": false
- },
- {
-  "id": 11,
-  "datetime": "2026-07-10T12:30:00+02:00",
-  "type": "reel",
-  "title": "lippenstift , detail",
-  "assets": [
-   "assets/a11_1.mp4"
-  ],
-  "caption": "alle denken werbung ohne shooting sieht billig aus. schau hin.\n\ndas gegenteil stimmt, wenn mans richtig macht. magst du den beweis an deinem produkt? schreib mir.\n\n#aivideo #adcreative #kiwerbung #contentcreation #marketingdeutschland #aiugc",
-  "approved": true,
-  "posted": false
- },
- {
-  "id": 12,
-  "datetime": "2026-07-11T12:30:00+02:00",
-  "type": "image",
-  "title": "amber , warm",
-  "assets": [
-   "assets/a12_1.jpg"
-  ],
-  "caption": "produktwerbung im kampagnen-niveau. an einem nachmittag.\n\nkein hexenwerk, nur ein anderer weg. schick mir dein produktfoto fuer ein gratis frame.\n\n#aiproductphotography #produktfotografie #beautyeditorial #d2cmarketing #aicreative #kiwerbung",
-  "approved": true,
-  "posted": false
- },
- {
-  "id": 13,
-  "datetime": "2026-07-12T12:30:00+02:00",
-  "type": "reel",
-  "title": "uhr , macro",
-  "assets": [
-   "assets/a13_1.mp4"
-  ],
-  "caption": "selbst ein kleines detail wird zur grossen ad.\n\nlicht, material, geduld , mehr nicht. was ist das detail an deinem produkt? schreib mir.\n\n#aivideo #adcreative #kiwerbung #contentcreation #marketingdeutschland #aiugc",
-  "approved": true,
-  "posted": false
- },
- {
-  "id": 14,
-  "datetime": "2026-07-13T12:30:00+02:00",
-  "type": "image",
-  "title": "tech , nicht nur beauty",
-  "assets": [
-   "assets/a14_1.jpg"
-  ],
-  "caption": "nicht nur beauty. jedes produkt sitzt sauber im licht.\n\nwelche kategorie ist deine? schick mir ein produktfoto, ich zeig dir was geht.\n\n#aiproductphotography #produktfotografie #beautyeditorial #d2cmarketing #aicreative #kiwerbung",
+  "caption": "der eine frame, der die ganze ad verkauft.\n\nmakro, 100mm-look, der tropfen kurz vorm fall. das sind die momente, an denen leute beim scrollen hängen bleiben. ein detail, komplett mit ki.\n\nkommentiere DROP, wenn du sowas für dein produkt willst.\n\n(ki-generiert)\n#macro #produktfotografie #aibeauty #detailshot #satisfying #aicreative",
   "approved": true,
   "posted": false
  }

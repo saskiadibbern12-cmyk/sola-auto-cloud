@@ -2,11 +2,10 @@ name: SOLA Instagram Auto-Post
 
 on:
   schedule:
-    # Zeiten in UTC. CEST (Sommer) = UTC+2.
-    - cron: '0 7 * * *'    # 09:00 CEST  (Slot A werktags)
-    - cron: '0 8 * * 6,0'  # 10:00 CEST  (Slot A Sa/So)
-    - cron: '30 10 * * *'  # 12:30 CEST  (Slot B)
-    - cron: '30 16 * * *'  # 18:30 CEST  (Slot C)
+    # Zeiten in UTC. CEST (Sommer) = UTC+2. 3 Slots täglich: 08:00 / 13:00 / 18:00 CEST.
+    - cron: '0 6 * * *'    # 08:00 CEST  (Slot A , Wert/Hook)
+    - cron: '0 11 * * *'   # 13:00 CEST  (Slot B , Produkt-Hero)
+    - cron: '0 16 * * *'   # 18:00 CEST  (Slot C , Mood/Editorial)
   workflow_dispatch:
     inputs:
       force_id:
@@ -35,6 +34,7 @@ jobs:
           IG_USER_ID: ${{ secrets.IG_USER_ID }}
           IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
           FORCE_ID: ${{ github.event.inputs.force_id }}
+          WINDOW_MIN: '150'
         run: python3 scripts/post-instagram.py
 
       - name: Zustand zurueck committen (posted/error)
