@@ -99,8 +99,19 @@ def publish_reel(ig, token, asset, caption):
 
 
 def _publish(ig, token, creation_id):
-    res = graph("POST", f"{ig}/media_publish", {"creation_id": creation_id, "access_token": token})
-    return res["id"]
+    # Container kann serverseitig noch verarbeiten (v.a. Carousel/Reel) -> bis zu ~60s retrien
+    last = None
+    for _ in range(12):
+        try:
+            res = graph("POST", f"{ig}/media_publish", {"creation_id": creation_id, "access_token": token})
+            return res["id"]
+        except RuntimeError as e:
+            last = e
+            # 9007 = "Media ID is not available / not ready yet" -> warten + nochmal
+            if "9007" in str(e) or "not available" in str(e) or "no est" in str(e):
+                time.sleep(5); continue
+            raise
+    raise RuntimeError(f"media_publish nach Retries nicht bereit: {last}")
 
 
 def main():
