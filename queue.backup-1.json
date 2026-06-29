@@ -1,0 +1,411 @@
+[
+ {
+  "id": 1,
+  "datetime": "2026-06-22T09:00:00+02:00",
+  "weekday": "Mo",
+  "slot": "A",
+  "type": "image",
+  "pillar": "PRODUKT",
+  "hero": false,
+  "title": "Skincare Hero (Kampagne 1)",
+  "assets": [
+   "assets/01_1.jpg"
+  ],
+  "caption": "manchmal fehlt einem produkt nur das richtige licht. dieser shot ist komplett mit ki gebaut, an einem nachmittag, ohne studio und ohne fotograf. ehrlich gefragt, würde dein produkt so im feed auffallen?\n\n#aiproductphotography #produktfotografie #beautyeditorial #d2cmarketing #aicreative #ecommercedeutschland",
+  "approved": true,
+  "posted": false,
+  "posted_at": null,
+  "ig_id": null,
+  "error": null
+ },
+ {
+  "id": 2,
+  "datetime": "2026-06-22T12:30:00+02:00",
+  "weekday": "Mo",
+  "slot": "B",
+  "type": "carousel",
+  "pillar": "WOW",
+  "hero": true,
+  "title": "real oder ki?",
+  "assets": [
+   "assets/02_1.jpg",
+   "assets/02_2.jpg",
+   "assets/02_3.jpg",
+   "assets/02_4.jpg",
+   "assets/02_5.jpg"
+  ],
+  "caption": "keine dieser frauen hat je existiert. kein shooting, kein casting, nur ein nachmittag mit ki. genau so können kampagnenbilder für deine marke aussehen, ganz ohne set und ohne gage. welche hätte dich am meisten getäuscht? (und falls du sowas für deine marke willst, der weg steht im profil.)\n\n#aiugc #aigeneratedimages #kiwerbung #marketingdeutschland #adcreative #aimodel",
+  "approved": true,
+  "posted": false,
+  "posted_at": null,
+  "ig_id": null,
+  "error": null
+ },
+ {
+  "id": 3,
+  "datetime": "2026-06-22T18:30:00+02:00",
+  "weekday": "Mo",
+  "slot": "C",
+  "type": "reel",
+  "pillar": "CRAFT",
+  "hero": false,
+  "title": "das unmoegliche shooting",
+  "assets": [
+   "assets/03_1.mp4"
+  ],
+  "caption": "das bild hattest du sofort im kopf: weiches licht, seide, perfekte stimmung. in echt wären das ein team, ein termin und ein budget das wehtut. hier lief nie eine kamera. hättest du es gemerkt?\n\n#aivideo #editorialfilm #beautyreel #aicreative #contentcreation #werbefilm",
+  "approved": true,
+  "posted": false,
+  "posted_at": null,
+  "ig_id": null,
+  "error": null
+ },
+ {
+  "id": 4,
+  "datetime": "2026-06-23T09:00:00+02:00",
+  "weekday": "Di",
+  "slot": "A",
+  "type": "image",
+  "pillar": "PRODUKT",
+  "hero": false,
+  "title": "Macro Drop (Kampagne 1)",
+  "assets": [
+   "assets/04_1.jpg"
+  ],
+  "caption": "kein produkt verkauft sich über die flasche, sondern über die textur und das licht darauf. diesen tropfen hat nie ein makro-objektiv gesehen, das ist alles ki. worauf fällt dein blick zuerst?\n\n#aiproductphotography #makrofotografie #beautyeditorial #produktdesign #aicreative #skincare",
+  "approved": true,
+  "posted": false,
+  "posted_at": null,
+  "ig_id": null,
+  "error": null
+ },
+ {
+  "id": 5,
+  "datetime": "2026-06-23T12:30:00+02:00",
+  "weekday": "Di",
+  "slot": "B",
+  "type": "carousel",
+  "pillar": "WERT",
+  "hero": false,
+  "title": "8 frauen, 0 gage",
+  "assets": [
+   "assets/05_1.jpg",
+   "assets/05_2.jpg",
+   "assets/05_3.jpg",
+   "assets/05_4.jpg",
+   "assets/05_5.jpg"
+  ],
+  "caption": "acht hauttöne, eine bildidee, ein nachmittag. in echt wären das acht castings und acht gagen. vielfalt sollte keine budgetfrage sein, und mit ki ist sie es nicht mehr. welches gesicht hättest du für echt gehalten?\n\n#diversitymarketing #aiugc #inklusion #kampagne #aimodel #marketingdeutschland",
+  "approved": true,
+  "posted": false,
+  "posted_at": null,
+  "ig_id": null,
+  "error": null
+ },
+ {
+  "id": 6,
+  "datetime": "2026-06-23T18:30:00+02:00",
+  "weekday": "Di",
+  "slot": "C",
+  "type": "reel",
+  "pillar": "CRAFT",
+  "hero": true,
+  "title": "seide im wind",
+  "assets": [
+   "assets/06_1.mp4"
+  ],
+  "caption": "nur stoff der im wind atmet und goldenes licht. so eine einstellung kostet normal einen ganzen drehtag, die hier ist in minuten entstanden. manchmal erschreckt mich selbst wie ruhig das wirkt.\n\n#aivideo #fashionfilm #editorial #aicreative #slowmotion #aesthetic",
+  "approved": true,
+  "posted": false,
+  "posted_at": null,
+  "ig_id": null,
+  "error": null
+ },
+ {
+  "id": 7,
+  "datetime": "2026-06-24T09:00:00+02:00",
+  "weekday": "Mi",
+  "slot": "A",
+  "type": "image",
+  "pillar": "PRODUKT",
+  "hero": false,
+  "title": "Skincare Hero (Kampagne 2)",
+  "assets": [
+   "assets/07_1.jpg"
+  ],
+  "caption": "so ein hero-bild buchen marken sonst als halben drehtag ein. dieses ist ki, ein nachmittag, niemand musste anreisen. würdest du den unterschied sehen wenn ich nichts sagen würde?\n\n#aiproductphotography #heroimage #produktfotografie #d2c #aicreative #beautymarketing",
+  "approved": true,
+  "posted": false,
+  "posted_at": null,
+  "ig_id": null,
+  "error": null
+ },
+ {
+  "id": 8,
+  "datetime": "2026-06-24T12:30:00+02:00",
+  "weekday": "Mi",
+  "slot": "B",
+  "type": "reel",
+  "pillar": "WOW",
+  "hero": true,
+  "title": "reveal: amber serum",
+  "assets": [
+   "assets/08_1.mp4"
+  ],
+  "caption": "links ein rohes handyfoto, rechts dieselbe flasche eine sekunde später. dazwischen kein fotograf und kein studio, nur ki. genau das baue ich für marken die aussehen wollen wie die großen, ohne deren budget. wenn das für dein produkt spannend ist, im profil steht wie.\n\n#beforeandafter #aiugc #kiwerbung #adcreative #ecommercemarketing #aivideo",
+  "approved": true,
+  "posted": false,
+  "posted_at": null,
+  "ig_id": null,
+  "error": null
+ },
+ {
+  "id": 9,
+  "datetime": "2026-06-24T18:30:00+02:00",
+  "weekday": "Mi",
+  "slot": "C",
+  "type": "reel",
+  "pillar": "NAHBAR",
+  "hero": false,
+  "title": "haar & licht",
+  "assets": [
+   "assets/09_1.mp4"
+  ],
+  "caption": "ein ganz ruhiger moment, licht das langsam durchs haar zieht. kein model war hier, kein set. ich teile diese kleinen tests offen, weil ich glaube dass marken bald genau so arbeiten.\n\n#aivideo #beautyreel #buildinginpublic #aicreative #contentcreation #aesthetic",
+  "approved": true,
+  "posted": false,
+  "posted_at": null,
+  "ig_id": null,
+  "error": null
+ },
+ {
+  "id": 10,
+  "datetime": "2026-06-25T09:00:00+02:00",
+  "weekday": "Do",
+  "slot": "A",
+  "type": "image",
+  "pillar": "PRODUKT",
+  "hero": true,
+  "title": "Macro (Kampagne 2)",
+  "assets": [
+   "assets/10_1.jpg"
+  ],
+  "caption": "leute kaufen kein produkt, sie kaufen ein gefühl von textur und frische. dieser makro-shot gibt genau das, komplett mit ki gebaut. so nah kommt kein handy an dein produkt. speicher dir das fürs nächste produktbild.\n\n#aiproductphotography #makrofotografie #texturedesign #produktfotografie #aicreative #beauty",
+  "approved": true,
+  "posted": false,
+  "posted_at": null,
+  "ig_id": null,
+  "error": null
+ },
+ {
+  "id": 11,
+  "datetime": "2026-06-25T12:30:00+02:00",
+  "weekday": "Do",
+  "slot": "B",
+  "type": "reel",
+  "pillar": "WERT",
+  "hero": false,
+  "title": "real vs ki",
+  "assets": [
+   "assets/11_1.mp4"
+  ],
+  "caption": "der abstand zwischen dem was du erwartest und dem was ki heute kann wird kleiner als vielen lieb ist. für deine marke ist genau das die chance. wo würdest du es zuerst einsetzen?\n\n#kiwerbung #aimarketing #adcreative #marketingstrategie #aiugc #zukunftmarketing",
+  "approved": true,
+  "posted": false,
+  "posted_at": null,
+  "ig_id": null,
+  "error": null
+ },
+ {
+  "id": 12,
+  "datetime": "2026-06-25T18:30:00+02:00",
+  "weekday": "Do",
+  "slot": "C",
+  "type": "reel",
+  "pillar": "CRAFT",
+  "hero": false,
+  "title": "botanik",
+  "assets": [
+   "assets/12_1.mp4"
+  ],
+  "caption": "weiche botanik, stilles licht, ein langer atemzug. kein studio, keine technik die man sieht, einfach eine stimmung. speicher dir das wenn deine marke so einen vibe braucht.\n\n#aivideo #botanical #editorial #aicreative #moodboard #aesthetic",
+  "approved": true,
+  "posted": false,
+  "posted_at": null,
+  "ig_id": null,
+  "error": null
+ },
+ {
+  "id": 13,
+  "datetime": "2026-06-26T09:00:00+02:00",
+  "weekday": "Fr",
+  "slot": "A",
+  "type": "image",
+  "pillar": "PRODUKT",
+  "hero": false,
+  "title": "Flatlay (Kampagne 1)",
+  "assets": [
+   "assets/13_1.jpg"
+  ],
+  "caption": "ein sauberes flatlay für shop oder feed, ohne tisch-styling und ohne nachmittag im studio. mit ki ist so ein bild in minuten fertig statt in tagen. wie viele produktbilder bräuchtest du eigentlich diesen monat?\n\n#flatlay #aiproductphotography #produktfotografie #ecommercedeutschland #aicreative #contentbatch",
+  "approved": true,
+  "posted": false,
+  "posted_at": null,
+  "ig_id": null,
+  "error": null
+ },
+ {
+  "id": 14,
+  "datetime": "2026-06-26T12:30:00+02:00",
+  "weekday": "Fr",
+  "slot": "B",
+  "type": "reel",
+  "pillar": "WERT",
+  "hero": false,
+  "title": "hype grid",
+  "assets": [
+   "assets/14_1.mp4"
+  ],
+  "caption": "ein schneller blick auf was in kurzer zeit entsteht, alles selbst gebaut und kein einziges shooting dabei. ich zeige bewusst die menge, weil genau das der punkt ist. ein tempo das sich keine klassische produktion leisten kann.\n\n#aiugc #contentcreation #adcreative #kiwerbung #marketingdeutschland #aivideo",
+  "approved": true,
+  "posted": false,
+  "posted_at": null,
+  "ig_id": null,
+  "error": null
+ },
+ {
+  "id": 15,
+  "datetime": "2026-06-26T18:30:00+02:00",
+  "weekday": "Fr",
+  "slot": "C",
+  "type": "reel",
+  "pillar": "CRAFT",
+  "hero": true,
+  "title": "strand & sonne",
+  "assets": [
+   "assets/15_1.mp4"
+  ],
+  "caption": "diese leichtigkeit sieht aus wie ein teurer reisedreh, in echt hat niemand einen flieger genommen. wenn deine marke diesen sommer-vibe braucht, weißt du jetzt dass er auch ohne reise geht.\n\n#aivideo #summervibes #travelaesthetic #aicreative #beautyreel #editorial",
+  "approved": true,
+  "posted": false,
+  "posted_at": null,
+  "ig_id": null,
+  "error": null
+ },
+ {
+  "id": 16,
+  "datetime": "2026-06-27T10:00:00+02:00",
+  "weekday": "Sa",
+  "slot": "A",
+  "type": "image",
+  "pillar": "PRODUKT",
+  "hero": false,
+  "title": "In-Use (Kampagne 2)",
+  "assets": [
+   "assets/16_1.jpg"
+  ],
+  "caption": "produkt in der hand, dewy haut, dieses greifbare gefühl. und doch ist niemand hier echt. genau dieser in-use-look verkauft, weil er nah und menschlich wirkt. würdest du es kaufen?\n\n#aiugc #inusephoto #beautymarketing #produktfotografie #aicreative #skincare",
+  "approved": true,
+  "posted": false,
+  "posted_at": null,
+  "ig_id": null,
+  "error": null
+ },
+ {
+  "id": 17,
+  "datetime": "2026-06-27T12:30:00+02:00",
+  "weekday": "Sa",
+  "slot": "B",
+  "type": "carousel",
+  "pillar": "WOW",
+  "hero": true,
+  "title": "eine kampagne in 3 bildern",
+  "assets": [
+   "assets/17_1.jpg",
+   "assets/17_2.jpg",
+   "assets/17_3.jpg"
+  ],
+  "caption": "hero, detail, in-use, das ist eine komplette mini-kampagne aus einem nachmittag. so liefere ich sets statt einzelbilder, drei zusammenhängende looks in einer bildwelt. genau das braucht ein produktlaunch. willst du so ein set? schreib mir einfach.\n\n#aiugc #kampagne #productlaunch #adcreative #aicreative #marketingdeutschland",
+  "approved": true,
+  "posted": false,
+  "posted_at": null,
+  "ig_id": null,
+  "error": null
+ },
+ {
+  "id": 18,
+  "datetime": "2026-06-27T18:30:00+02:00",
+  "weekday": "Sa",
+  "slot": "C",
+  "type": "reel",
+  "pillar": "CRAFT",
+  "hero": false,
+  "title": "vielfalt",
+  "assets": [
+   "assets/18_1.mp4"
+  ],
+  "caption": "viele gesichter, eine idee, kein einziges casting. ki macht vielfalt zur selbstverständlichkeit statt zur budgetfrage. speicher dir das fürs nächste kampagnen-briefing.\n\n#aimodel #diversity #aiugc #aicreative #kampagne #contentcreation",
+  "approved": true,
+  "posted": false,
+  "posted_at": null,
+  "ig_id": null,
+  "error": null
+ },
+ {
+  "id": 19,
+  "datetime": "2026-06-28T10:00:00+02:00",
+  "weekday": "So",
+  "slot": "A",
+  "type": "image",
+  "pillar": "PRODUKT",
+  "hero": false,
+  "title": "Texture (Kampagne 2)",
+  "assets": [
+   "assets/19_1.jpg"
+  ],
+  "caption": "nur textur, nur licht, sonst nichts. der shot der ein produkt begehrenswert macht, ganz ohne studio. solche details entscheiden im feed über stop oder weiterscrollen.\n\n#aiproductphotography #texturedesign #makrofotografie #produktfotografie #aicreative #beauty",
+  "approved": true,
+  "posted": false,
+  "posted_at": null,
+  "ig_id": null,
+  "error": null
+ },
+ {
+  "id": 20,
+  "datetime": "2026-06-28T12:30:00+02:00",
+  "weekday": "So",
+  "slot": "B",
+  "type": "reel",
+  "pillar": "NAHBAR",
+  "hero": true,
+  "title": "sola, ganz am anfang",
+  "assets": [
+   "assets/20_1.mp4"
+  ],
+  "caption": "das ist sola, ganz am anfang. kein team, kein studio, nur ki und jemand der sie führt. ich baue das hier offen auf, weil ich glaube dass marken bald genau so arbeiten. was würdest du als erstes damit bauen?\n\n#buildinginpublic #aistudio #aicreative #founderjourney #marketingdeutschland #aiugc",
+  "approved": true,
+  "posted": false,
+  "posted_at": null,
+  "ig_id": null,
+  "error": null
+ },
+ {
+  "id": 21,
+  "datetime": "2026-06-28T18:30:00+02:00",
+  "weekday": "So",
+  "slot": "C",
+  "type": "reel",
+  "pillar": "CRAFT",
+  "hero": false,
+  "title": "ruhiger take zum wochenende",
+  "assets": [
+   "assets/21_1.mp4"
+  ],
+  "caption": "ein ruhiger, cineastischer take zum wochenausklang. nichts davon ist echt und trotzdem fühlt es sich warm an. genau diese ruhe versuche ich in jedes bild zu legen.\n\n#aivideo #cinematic #aesthetic #aicreative #beautyreel #weekendmood",
+  "approved": true,
+  "posted": false,
+  "posted_at": null,
+  "ig_id": null,
+  "error": null
+ }
+]

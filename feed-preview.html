@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>@sola.makes , Feed-Plan Vorschau</title>
+<style>
+  :root{
+    --cream:#F7F1E8; --espresso:#211A1C; --burgundy:#6E1A2E;
+    --gold:#B98B2E; --sand:#E0D2BD; --line:#e6ddd0;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+    background:var(--cream); color:var(--espresso); padding:0 0 60px;
+  }
+  /* Profil-Kopf wie Instagram */
+  .profile{max-width:935px;margin:0 auto;padding:30px 20px 18px;display:flex;gap:30px;align-items:center}
+  .avatar{width:120px;height:120px;border-radius:50%;flex:0 0 120px;
+    background:radial-gradient(circle at 50% 45%, #F7F1E8 0 30%, #211A1C 31% 100%);
+    display:flex;align-items:center;justify-content:center;position:relative;
+    border:2px solid var(--line)}
+  .avatar::before{content:"";position:absolute;width:42px;height:42px;border-radius:50%;
+    background:var(--cream);box-shadow:
+      0 -30px 0 -16px var(--cream),0 30px 0 -16px var(--cream),
+      -30px 0 0 -16px var(--cream),30px 0 0 -16px var(--cream),
+      21px 21px 0 -16px var(--cream),-21px -21px 0 -16px var(--cream),
+      21px -21px 0 -16px var(--cream),-21px 21px 0 -16px var(--cream)}
+  .pinfo h1{font-size:24px;font-weight:400;letter-spacing:.5px;margin-bottom:6px}
+  .pinfo .handle{font-weight:600}
+  .stats{display:flex;gap:28px;margin:14px 0;font-size:15px}
+  .stats b{font-weight:700}
+  .bio{font-size:14px;line-height:1.5;max-width:340px}
+  .bio .tag{color:var(--burgundy);font-weight:600}
+  .planbar{max-width:935px;margin:0 auto;padding:10px 20px;border-top:1px solid var(--line);
+    border-bottom:1px solid var(--line);display:flex;justify-content:space-between;
+    align-items:center;flex-wrap:wrap;gap:10px}
+  .planbar .title{font-weight:700;font-size:13px;letter-spacing:1.5px;text-transform:uppercase;color:var(--burgundy)}
+  .planbar .legend{font-size:12px;color:#8a7d6d;display:flex;gap:16px;flex-wrap:wrap}
+  .legend span{display:inline-flex;align-items:center;gap:5px}
+  .dot{width:9px;height:9px;border-radius:2px;display:inline-block}
+  /* Grid */
+  .grid{max-width:935px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:3px;padding:3px 0}
+  .cell{position:relative;aspect-ratio:1/1;overflow:hidden;cursor:pointer;background:var(--sand)}
+  .cell img,.cell video{width:100%;height:100%;object-fit:cover;display:block;transition:transform .3s}
+  .cell:hover img,.cell:hover video{transform:scale(1.05)}
+  .cell .typeicon{position:absolute;top:8px;right:8px;color:#fff;
+    filter:drop-shadow(0 1px 3px rgba(0,0,0,.6));font-size:16px}
+  .cell .daytag{position:absolute;top:8px;left:8px;background:rgba(33,26,28,.78);color:var(--cream);
+    font-size:10px;font-weight:700;padding:3px 7px;border-radius:5px;letter-spacing:.5px}
+  .cell .slotline{position:absolute;left:0;bottom:0;right:0;height:5px}
+  .cell .overlay{position:absolute;inset:0;background:linear-gradient(transparent 55%,rgba(33,26,28,.82));
+    display:flex;align-items:flex-end;padding:10px;opacity:0;transition:opacity .25s}
+  .cell:hover .overlay{opacity:1}
+  .cell .overlay span{color:#fff;font-size:12px;font-weight:600;line-height:1.3}
+  /* Modal */
+  .modal{position:fixed;inset:0;background:rgba(20,15,16,.85);display:none;
+    align-items:center;justify-content:center;z-index:50;padding:20px}
+  .modal.open{display:flex}
+  .card{background:#fff;border-radius:14px;max-width:880px;width:100%;max-height:90vh;
+    display:flex;overflow:hidden;box-shadow:0 30px 80px rgba(0,0,0,.4)}
+  .card .media{flex:1 1 56%;background:#000;display:flex;align-items:center;justify-content:center;position:relative;min-width:0}
+  .card .media img,.card .media video{max-width:100%;max-height:90vh;object-fit:contain}
+  .card .nav{position:absolute;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.85);
+    border:none;width:34px;height:34px;border-radius:50%;cursor:pointer;font-size:16px;font-weight:700}
+  .card .nav.prev{left:10px} .card .nav.next{right:10px}
+  .card .counter{position:absolute;bottom:10px;left:50%;transform:translateX(-50%);
+    background:rgba(33,26,28,.7);color:#fff;font-size:11px;padding:3px 9px;border-radius:10px}
+  .card .side{flex:1 1 44%;display:flex;flex-direction:column;min-width:300px}
+  .side .head{padding:16px 18px;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:12px}
+  .side .head .av{width:34px;height:34px;border-radius:50%;background:var(--espresso);flex:0 0 34px}
+  .side .head .meta{font-size:13px}
+  .side .head .meta b{display:block}
+  .side .head .meta small{color:#8a7d6d}
+  .side .badges{padding:12px 18px 0;display:flex;gap:8px;flex-wrap:wrap}
+  .badge{font-size:11px;font-weight:700;padding:4px 10px;border-radius:20px;letter-spacing:.5px}
+  .badge.when{background:var(--sand);color:var(--espresso)}
+  .badge.type{background:var(--burgundy);color:#fff}
+  .side .body{padding:14px 18px;overflow-y:auto;flex:1}
+  .side .body .cap{font-size:14px;line-height:1.6;white-space:pre-wrap}
+  .side .body .tags{margin-top:12px;font-size:13px;color:var(--burgundy);line-height:1.6}
+  .side .foot{padding:12px 18px;border-top:1px solid var(--line);display:flex;gap:10px}
+  .side .foot button{flex:1;padding:10px;border:none;border-radius:8px;font-weight:700;cursor:pointer;font-size:13px}
+  .copybtn{background:var(--espresso);color:var(--cream)}
+  .closebtn{background:var(--sand);color:var(--espresso)}
+  .xbtn{position:absolute;top:14px;right:18px;color:#fff;font-size:30px;cursor:pointer;z-index:60;line-height:1}
+  @media(max-width:720px){
+    .card{flex-direction:column;max-height:94vh}
+    .card .media{max-height:50vh} .card .side{min-width:0}
+    .profile{gap:18px} .avatar{width:80px;height:80px;flex-basis:80px}
+  }
+</style>
+</head>
+<body>
+
+<div class="profile">
+  <div class="avatar"></div>
+  <div class="pinfo">
+    <h1><span class="handle">sola.makes</span></h1>
+    <div class="stats"><span><b>14</b> Beiträge</span><span><b>—</b> Follower</span><span><b>Plan</b> Woche 1</span></div>
+    <div class="bio">
+      <b>SOLA , KI-Creative-Studio</b><br>
+      premium kampagnenbilder ohne shooting, ohne budget.<br>
+      <span class="tag">schau was heute geht.</span>
+    </div>
+  </div>
+</div>
+
+<div class="planbar">
+  <div class="title">Feed-Plan · Mo 29.06. , So 05.07.</div>
+  <div class="legend">
+    <span><i class="dot" style="background:#B98B2E"></i> 12:30 Still / Carousel</span>
+    <span><i class="dot" style="background:#6E1A2E"></i> 18:30 Reel</span>
+    <span>▶ Reel · ▦ Carousel</span>
+  </div>
+</div>
+
+<div class="grid" id="grid"></div>
+
+<!-- Modal -->
+<div class="modal" id="modal">
+  <span class="xbtn" onclick="closeModal()">×</span>
+  <div class="card">
+    <div class="media" id="media"></div>
+    <div class="side">
+      <div class="head">
+        <div class="av"></div>
+        <div class="meta"><b>sola.makes</b><small id="mTitle"></small></div>
+      </div>
+      <div class="badges">
+        <span class="badge when" id="mWhen"></span>
+        <span class="badge type" id="mType"></span>
+      </div>
+      <div class="body">
+        <div class="cap" id="mCap"></div>
+        <div class="tags" id="mTags"></div>
+      </div>
+      <div class="foot">
+        <button class="copybtn" onclick="copyCap()">Caption kopieren</button>
+        <button class="closebtn" onclick="closeModal()">Schließen</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+// ===== Der Feed-Plan (14 Posts, 2/Tag, geschärfte Captions) =====
+const POSTS = [
+ {id:2, wd:"Mo", date:"29.06.", time:"12:30", slot:"B", type:"carousel", title:"real oder ki?",
+  assets:["assets/02_1.jpg","assets/02_2.jpg","assets/02_3.jpg","assets/02_4.jpg","assets/02_5.jpg"],
+  cap:`real oder ki? schau genau hin.\n\nkeine dieser frauen hat je existiert. kein shooting, kein casting, nur ein nachmittag mit ki. genau so können kampagnenbilder für deine marke aussehen, ohne set und ohne gage.\n\nwelche hätte dich am meisten getäuscht? schreibs in die kommentare (und schick das mal jemandem der noch glaubt sowas braucht ein teures shooting).`,
+  tags:"#aiugc #aigeneratedimages #kiwerbung #marketingdeutschland #adcreative #aimodel"},
+
+ {id:3, wd:"Mo", date:"29.06.", time:"18:30", slot:"C", type:"reel", title:"das unmögliche shooting",
+  assets:["assets/03_1.mp4"],
+  cap:`dieses shooting hat nie stattgefunden.\n\ndas bild hattest du sofort im kopf: weiches licht, seide, perfekte stimmung. in echt wären das ein team, ein termin und ein budget das wehtut. hier lief nie eine kamera.\n\nhättest du es gemerkt?`,
+  tags:"#aivideo #editorialfilm #beautyreel #aicreative #contentcreation #werbefilm"},
+
+ {id:5, wd:"Di", date:"30.06.", time:"12:30", slot:"B", type:"carousel", title:"8 frauen, 0 gage",
+  assets:["assets/05_1.jpg","assets/05_2.jpg","assets/05_3.jpg","assets/05_4.jpg","assets/05_5.jpg"],
+  cap:`acht hauttöne, eine bildidee, ein nachmittag.\n\nin echt wären das acht castings und acht gagen. vielfalt sollte keine budgetfrage sein, und mit ki ist sie es nicht mehr.\n\nwelches gesicht hättest du für echt gehalten?`,
+  tags:"#diversitymarketing #aiugc #inklusion #kampagne #aimodel #marketingdeutschland"},
+
+ {id:6, wd:"Di", date:"30.06.", time:"18:30", slot:"C", type:"reel", title:"seide im wind",
+  assets:["assets/06_1.mp4"],
+  cap:`nur stoff der im wind atmet und goldenes licht.\n\nso eine einstellung kostet normal einen ganzen drehtag. die hier ist in minuten entstanden. manchmal erschreckt mich selbst wie ruhig das wirkt.\n\nwürdest du den unterschied sehen?`,
+  tags:"#aivideo #fashionfilm #editorial #aicreative #slowmotion #aesthetic"},
+
+ {id:1, wd:"Mi", date:"01.07.", time:"12:30", slot:"A", type:"image", title:"skincare hero",
+  assets:["assets/01_1.jpg"],
+  cap:`manchmal fehlt einem produkt nur das richtige licht.\n\ndieser shot ist komplett mit ki gebaut, an einem nachmittag, ohne studio und ohne fotograf.\n\nehrlich gefragt: würde dein produkt so im feed auffallen?`,
+  tags:"#aiproductphotography #produktfotografie #beautyeditorial #d2cmarketing #aicreative #ecommercedeutschland"},
+
+ {id:9, wd:"Mi", date:"01.07.", time:"18:30", slot:"C", type:"reel", title:"haar & licht",
+  assets:["assets/09_1.mp4"],
+  cap:`ein ganz ruhiger moment, licht das langsam durchs haar zieht.\n\nkein model war hier, kein set. ich teile diese kleinen tests offen, weil ich glaube dass marken bald genau so arbeiten.\n\nwürdest du es dir auf einem produkt vorstellen?`,
+  tags:"#aivideo #beautyreel #buildinginpublic #aicreative #contentcreation #aesthetic"},
+
+ {id:17, wd:"Do", date:"02.07.", time:"12:30", slot:"B", type:"carousel", title:"eine kampagne in 3 bildern",
+  assets:["assets/17_1.jpg","assets/17_2.jpg","assets/17_3.jpg"],
+  cap:`hero, detail, in-use , eine komplette mini-kampagne aus einem nachmittag.\n\nso liefere ich sets statt einzelbilder: drei zusammenhängende looks in einer bildwelt. genau das braucht ein produktlaunch.\n\nwillst du so ein set für deine marke? schreib mir einfach.`,
+  tags:"#aiugc #kampagne #productlaunch #adcreative #aicreative #marketingdeutschland"},
+
+ {id:11, wd:"Do", date:"02.07.", time:"18:30", slot:"C", type:"reel", title:"real vs ki",
+  assets:["assets/11_1.mp4"],
+  cap:`der abstand zwischen dem was du erwartest und dem was ki heute kann wird kleiner als vielen lieb ist.\n\nfür deine marke ist genau das die chance.\n\nwo würdest du es zuerst einsetzen?`,
+  tags:"#kiwerbung #aimarketing #adcreative #marketingstrategie #aiugc #zukunftmarketing"},
+
+ {id:13, wd:"Fr", date:"03.07.", time:"12:30", slot:"A", type:"image", title:"flatlay",
+  assets:["assets/13_1.jpg"],
+  cap:`ein sauberes flatlay für shop oder feed, ohne tisch-styling und ohne nachmittag im studio.\n\nmit ki ist so ein bild in minuten fertig statt in tagen.\n\nwie viele produktbilder bräuchtest du eigentlich diesen monat?`,
+  tags:"#flatlay #aiproductphotography #produktfotografie #ecommercedeutschland #aicreative #contentbatch"},
+
+ {id:15, wd:"Fr", date:"03.07.", time:"18:30", slot:"C", type:"reel", title:"strand & sonne",
+  assets:["assets/15_1.mp4"],
+  cap:`diese leichtigkeit sieht aus wie ein teurer reisedreh. in echt hat niemand einen flieger genommen.\n\nwenn deine marke diesen sommer-vibe braucht, weißt du jetzt dass er auch ohne reise geht.\n\nspeicher dirs fürs nächste sommer-briefing.`,
+  tags:"#aivideo #summervibes #travelaesthetic #aicreative #beautyreel #editorial"},
+
+ {id:4, wd:"Sa", date:"04.07.", time:"12:30", slot:"A", type:"image", title:"macro drop",
+  assets:["assets/04_1.jpg"],
+  cap:`kein produkt verkauft sich über die flasche, sondern über die textur und das licht darauf.\n\ndiesen tropfen hat nie ein makro-objektiv gesehen, das ist alles ki.\n\nworauf fällt dein blick zuerst?`,
+  tags:"#aiproductphotography #makrofotografie #beautyeditorial #produktdesign #aicreative #skincare"},
+
+ {id:14, wd:"Sa", date:"04.07.", time:"18:30", slot:"C", type:"reel", title:"hype grid",
+  assets:["assets/14_1.mp4"],
+  cap:`ein schneller blick auf was in kurzer zeit entsteht, alles selbst gebaut und kein einziges shooting dabei.\n\nich zeige bewusst die menge, weil genau das der punkt ist: ein tempo das sich keine klassische produktion leisten kann.\n\nwie viel content bräuchtest du im monat?`,
+  tags:"#aiugc #contentcreation #adcreative #kiwerbung #marketingdeutschland #aivideo"},
+
+ {id:16, wd:"So", date:"05.07.", time:"12:30", slot:"A", type:"image", title:"in-use",
+  assets:["assets/16_1.jpg"],
+  cap:`produkt in der hand, dewy haut, dieses greifbare gefühl. und doch ist niemand hier echt.\n\ngenau dieser in-use-look verkauft, weil er nah und menschlich wirkt.\n\nwürdest du es kaufen?`,
+  tags:"#aiugc #inusephoto #beautymarketing #produktfotografie #aicreative #skincare"},
+
+ {id:18, wd:"So", date:"05.07.", time:"18:30", slot:"C", type:"reel", title:"vielfalt",
+  assets:["assets/18_1.mp4"],
+  cap:`viele gesichter, eine idee, kein einziges casting.\n\nki macht vielfalt zur selbstverständlichkeit statt zur budgetfrage.\n\nspeicher dir das fürs nächste kampagnen-briefing.`,
+  tags:"#aimodel #diversity #aiugc #aicreative #kampagne #contentcreation"},
+];
+
+const ICON={reel:"▶", carousel:"▦", image:""};
+const SLOTCOLOR={A:"#B98B2E", B:"#B98B2E", C:"#6E1A2E"};
+
+const grid=document.getElementById('grid');
+POSTS.forEach((p,i)=>{
+  const thumb=p.assets[0];
+  const isVid=thumb.endsWith('.mp4');
+  const media= isVid
+    ? `<video src="${thumb}" muted playsinline preload="metadata"></video>`
+    : `<img src="${thumb}" alt="${p.title}" loading="lazy">`;
+  const cell=document.createElement('div');
+  cell.className='cell';
+  cell.innerHTML=`
+    ${media}
+    <span class="daytag">${p.wd} · ${p.time}</span>
+    <span class="typeicon">${ICON[p.type]}</span>
+    <span class="slotline" style="background:${SLOTCOLOR[p.slot]}"></span>
+    <div class="overlay"><span>${p.title}</span></div>`;
+  cell.onclick=()=>openModal(i);
+  grid.appendChild(cell);
+});
+
+// ===== Modal =====
+let cur=0, slide=0;
+function openModal(i){
+  cur=i; slide=0;
+  const p=POSTS[i];
+  document.getElementById('mTitle').textContent=` · ${p.wd} ${p.date} · ${p.time}`;
+  document.getElementById('mWhen').textContent=`${p.wd} ${p.date} · ${p.time} Uhr`;
+  document.getElementById('mType').textContent= p.type==='reel'?'REEL': p.type==='carousel'?'CAROUSEL':'POST';
+  document.getElementById('mCap').textContent=p.cap;
+  document.getElementById('mTags').textContent=p.tags;
+  renderMedia();
+  document.getElementById('modal').classList.add('open');
+}
+function renderMedia(){
+  const p=POSTS[cur];
+  const a=p.assets[slide];
+  const isVid=a.endsWith('.mp4');
+  const inner= isVid
+    ? `<video src="${a}" controls autoplay muted loop playsinline></video>`
+    : `<img src="${a}" alt="">`;
+  const multi=p.assets.length>1;
+  const nav= multi
+    ? `<button class="nav prev" onclick="event.stopPropagation();move(-1)">‹</button>
+       <button class="nav next" onclick="event.stopPropagation();move(1)">›</button>
+       <div class="counter">${slide+1} / ${p.assets.length}</div>` : '';
+  document.getElementById('media').innerHTML=inner+nav;
+}
+function move(d){
+  const p=POSTS[cur];
+  slide=(slide+d+p.assets.length)%p.assets.length;
+  renderMedia();
+}
+function closeModal(){
+  document.getElementById('modal').classList.remove('open');
+  document.getElementById('media').innerHTML='';
+}
+function copyCap(){
+  const p=POSTS[cur];
+  navigator.clipboard.writeText(p.cap+"\n\n"+p.tags).then(()=>{
+    const b=document.querySelector('.copybtn'); const t=b.textContent;
+    b.textContent='kopiert ✓'; setTimeout(()=>b.textContent=t,1400);
+  });
+}
+document.getElementById('modal').addEventListener('click',e=>{
+  if(e.target.id==='modal') closeModal();
+});
+document.addEventListener('keydown',e=>{
+  if(!document.getElementById('modal').classList.contains('open'))return;
+  if(e.key==='Escape')closeModal();
+  if(e.key==='ArrowLeft')move(-1);
+  if(e.key==='ArrowRight')move(1);
+});
+</script>
+</body>
+</html>

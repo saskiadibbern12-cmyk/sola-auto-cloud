@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SOLA , KI-Creative-Studio für Beauty & Wellness</title>
+<style>
+:root{
+  --sand:#f4efe8; --cream:#fbf9f5; --ink:#1a1714; --mut:#6b625a;
+  --amber:#b9763f; --line:#e6ded3; --max:1120px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--cream);color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  line-height:1.6;-webkit-font-smoothing:antialiased}
+.serif{font-family:Georgia,"Times New Roman",serif}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+/* nav */
+nav{position:sticky;top:0;z-index:50;background:rgba(251,249,245,.85);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav .row{display:flex;align-items:center;justify-content:space-between;height:64px}
+nav .logo{font-weight:700;letter-spacing:.18em;font-size:15px}
+nav .links{display:flex;gap:26px;font-size:14px}
+nav .links a{color:var(--mut);text-decoration:none}
+nav .links a:hover{color:var(--ink)}
+.btn{display:inline-block;background:var(--ink);color:var(--cream);text-decoration:none;
+  padding:13px 22px;border-radius:999px;font-size:14px;font-weight:600;transition:.2s}
+.btn:hover{background:var(--amber)}
+.btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--ink)}
+.btn.ghost:hover{background:var(--ink);color:var(--cream)}
+@media(max-width:680px){nav .links{display:none}}
+/* hero */
+.hero{padding:96px 0 72px;text-align:center}
+.kicker{font-size:13px;letter-spacing:.22em;text-transform:uppercase;color:var(--amber);margin-bottom:20px}
+.hero h1{font-size:clamp(34px,6vw,62px);line-height:1.08;font-weight:400;max-width:14ch;margin:0 auto 22px}
+.hero p{font-size:clamp(16px,2.2vw,20px);color:var(--mut);max-width:54ch;margin:0 auto 32px}
+.hero .cta{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+/* portfolio */
+section{padding:72px 0}
+.head{text-align:center;margin-bottom:44px}
+.head .kicker{margin-bottom:12px}
+.head h2{font-size:clamp(26px,4vw,40px);font-weight:400}
+.head p{color:var(--mut);max-width:52ch;margin:14px auto 0}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+@media(max-width:760px){.grid{grid-template-columns:repeat(2,1fr)}}
+.tile{position:relative;aspect-ratio:4/5;overflow:hidden;border-radius:10px;background:var(--sand)}
+.tile img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s ease}
+.tile:hover img{transform:scale(1.06)}
+.tile .tag{position:absolute;left:12px;bottom:12px;color:#fff;font-size:12px;letter-spacing:.04em;
+  background:rgba(0,0,0,.35);padding:5px 10px;border-radius:999px;backdrop-filter:blur(4px)}
+/* steps */
+.steps{background:var(--sand)}
+.steprow{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+@media(max-width:760px){.steprow{grid-template-columns:1fr}}
+.step{background:var(--cream);border:1px solid var(--line);border-radius:14px;padding:28px}
+.step .n{font-family:Georgia,serif;font-size:34px;color:var(--amber);line-height:1}
+.step h3{margin:14px 0 8px;font-size:20px;font-weight:600}
+.step p{color:var(--mut);font-size:15px}
+/* services */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+@media(max-width:760px){.cards{grid-template-columns:1fr}}
+.card{border:1px solid var(--line);border-radius:14px;padding:26px;background:var(--cream)}
+.card h3{font-size:18px;margin-bottom:8px}
+.card p{color:var(--mut);font-size:15px}
+.card .price{margin-top:14px;font-family:Georgia,serif;font-size:15px;color:var(--amber)}
+/* about */
+.about{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
+@media(max-width:760px){.about{grid-template-columns:1fr}}
+.about img{width:100%;border-radius:14px;aspect-ratio:4/5;object-fit:cover}
+.about h2{font-size:clamp(24px,3.5vw,36px);font-weight:400;margin-bottom:16px}
+.about p{color:var(--mut);margin-bottom:14px}
+/* cta band */
+.band{background:var(--ink);color:var(--cream);text-align:center;border-radius:20px;padding:56px 24px;margin:0 24px}
+.band h2{font-size:clamp(26px,4vw,40px);font-weight:400;max-width:18ch;margin:0 auto 18px}
+.band p{color:#cabfb2;max-width:48ch;margin:0 auto 26px}
+.band .btn{background:var(--cream);color:var(--ink)}
+.band .btn:hover{background:var(--amber);color:#fff}
+/* footer */
+footer{padding:40px 0;text-align:center;color:var(--mut);font-size:13px;border-top:1px solid var(--line);margin-top:72px}
+/* reveal */
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap row">
+    <div class="logo serif">SOLA</div>
+    <div class="links">
+      <a href="#portfolio">Portfolio</a>
+      <a href="#prozess">So entsteht's</a>
+      <a href="#leistungen">Leistungen</a>
+      <a href="#ueber">Über</a>
+    </div>
+    <a href="#kontakt" class="btn">Projekt anfragen</a>
+  </div>
+</nav>
+
+<header class="hero wrap">
+  <div class="kicker reveal">KI-Creative-Studio · Beauty & Wellness</div>
+  <h1 class="serif reveal">Kampagnen, die aussehen wie ein 5.000-€-Shooting.</h1>
+  <p class="reveal">Produktbilder und Clips, komplett mit KI gebaut , kein Set, keine Crew, keine Reise. Dein Look im Feed, in Tagen statt Wochen.</p>
+  <div class="cta reveal">
+    <a href="#kontakt" class="btn">Projekt anfragen</a>
+    <a href="#portfolio" class="btn ghost">Portfolio ansehen</a>
+  </div>
+</header>
+
+<section id="portfolio">
+  <div class="wrap">
+    <div class="head reveal">
+      <div class="kicker">Portfolio</div>
+      <h2 class="serif">Echte Looks. Kein einziges Shooting.</h2>
+      <p>Eine Auswahl aus aktuellen Kampagnen , Produkt, Editorial, In-use.</p>
+    </div>
+    <div class="grid">
+      <div class="tile reveal"><img src="../assets/01_1.jpg" alt="Skincare Hero" loading="lazy"><span class="tag">Skincare Hero</span></div>
+      <div class="tile reveal"><img src="../assets/04_1.jpg" alt="Macro Drop" loading="lazy"><span class="tag">Macro</span></div>
+      <div class="tile reveal"><img src="../assets/07_1.jpg" alt="Hero" loading="lazy"><span class="tag">Hero</span></div>
+      <div class="tile reveal"><img src="../assets/10_1.jpg" alt="Texture" loading="lazy"><span class="tag">Textur</span></div>
+      <div class="tile reveal"><img src="../assets/13_1.jpg" alt="Flatlay" loading="lazy"><span class="tag">Flatlay</span></div>
+      <div class="tile reveal"><img src="../assets/16_1.jpg" alt="In-use" loading="lazy"><span class="tag">In-use</span></div>
+      <div class="tile reveal"><img src="../assets/17_1.jpg" alt="Kampagne" loading="lazy"><span class="tag">Kampagne</span></div>
+      <div class="tile reveal"><img src="../assets/19_1.jpg" alt="Detail" loading="lazy"><span class="tag">Detail</span></div>
+      <div class="tile reveal"><img src="../assets/02_1.jpg" alt="Editorial" loading="lazy"><span class="tag">Editorial</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="prozess" class="steps">
+  <div class="wrap">
+    <div class="head reveal">
+      <div class="kicker">So entsteht's</div>
+      <h2 class="serif">Vom Briefing zum fertigen Look , in drei Schritten.</h2>
+    </div>
+    <div class="steprow">
+      <div class="step reveal"><div class="n serif">01</div><h3>Briefing & Moodboard</h3><p>Du schickst Produkt, Marke und Stilrichtung. Wir bauen ein Moodboard und ein konsistentes Designsystem.</p></div>
+      <div class="step reveal"><div class="n serif">02</div><h3>KI-Produktion</h3><p>Hero-Shots, Detail, In-use und Reels , alles in deiner Bildwelt, ganz ohne Set, Crew oder Reise.</p></div>
+      <div class="step reveal"><div class="n serif">03</div><h3>Feinschliff & Lieferung</h3><p>Auswahl, letzte Politur, fertige Assets für Feed, Shop und Ads , in Tagen statt Wochen.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="leistungen">
+  <div class="wrap">
+    <div class="head reveal">
+      <div class="kicker">Leistungen</div>
+      <h2 class="serif">Was du buchen kannst.</h2>
+    </div>
+    <div class="cards">
+      <div class="card reveal"><h3>Produkt & Editorial</h3><p>Hero-, Makro- und Flatlay-Bilder in einer durchgängigen Bildwelt , bereit für Feed und Shop.</p><div class="price">Sets ab Anfrage</div></div>
+      <div class="card reveal"><h3>Kampagnen-Sets</h3><p>Zusammenhängende Mini-Kampagnen (Hero · Detail · In-use) für Launches , drei Looks, eine Bildsprache.</p><div class="price">Paketpreis</div></div>
+      <div class="card reveal"><h3>Reels & Clips</h3><p>Cineastische Produkt- und Editorial-Videos , slow motion, premium, ohne Drehtag.</p><div class="price">pro Clip / Bundle</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="ueber">
+  <div class="wrap about">
+    <img src="../assets/05_1.jpg" alt="SOLA" loading="lazy" class="reveal">
+    <div class="reveal">
+      <div class="kicker">Über SOLA</div>
+      <h2 class="serif">Ein Studio, das wie die Großen aussieht , zum Bruchteil.</h2>
+      <p>SOLA ist ein KI-Creative-Studio für Beauty & Wellness. Wir bauen Kampagnenbilder und Clips, die wirken wie ein teures Shooting , nur schneller, flexibler und ohne Set.</p>
+      <p>Nicht „KI ersetzt Fotografie". Sondern: Marken, die jetzt auf KI-Creative setzen, sehen aus wie die Großen , und behalten ihr Budget.</p>
+      <a href="#kontakt" class="btn">Lass uns bauen</a>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="band reveal" id="kontakt">
+    <h2 class="serif">Bereit für Bilder, bei denen man stehen bleibt?</h2>
+    <p>Erzähl mir kurz von deiner Marke , ich melde mich mit Ideen und einem passenden Set.</p>
+    <a href="mailto:hello@sola.makes?subject=Projektanfrage%20SOLA" class="btn">Projekt anfragen</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">© <span id="y"></span> SOLA , KI-Creative-Studio für Beauty &amp; Wellness · @sola.makes</div>
+</footer>
+
+<script>
+document.getElementById('y').textContent=new Date().getFullYear();
+const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>

@@ -20,12 +20,21 @@ Fehler -> Exit 1 -> GitHub schickt Fehler-Mail (keine lautlose Stille).
 import os, json, time, ssl, urllib.request, urllib.parse, urllib.error
 from datetime import datetime, timedelta, timezone
 
-# Facebook-LOGIN-Weg: Publishing ueber graph.facebook.com mit dem Page-Token.
-GRAPH = "https://graph.facebook.com/v21.0"
+# Instagram-LOGIN-Weg: Publishing ueber graph.instagram.com mit dem IG-User-Token.
+GRAPH = "https://graph.instagram.com/v21.0"
 CTX = ssl.create_default_context()
 REPO_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 QUEUE_PATH = os.path.join(REPO_DIR, "queue.json")
 BERLIN = timezone(timedelta(hours=2))  # CEST; Winter = +1
+
+# Lokaler Lauf: .env laden, falls vorhanden (in GitHub Actions kommen die Werte aus Secrets)
+_ENVFILE = os.path.join(REPO_DIR, ".env")
+if os.path.exists(_ENVFILE):
+    for _line in open(_ENVFILE, encoding="utf-8"):
+        _line = _line.strip()
+        if _line and not _line.startswith("#") and "=" in _line:
+            _k, _v = _line.split("=", 1)
+            os.environ.setdefault(_k, _v)
 
 
 def env(name, required=True, default=None):
