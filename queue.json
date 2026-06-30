@@ -23,8 +23,20 @@
   "ig_id": "18098900567260441"
  },
  {
+  "id": 4,
+  "datetime": "2026-06-30T18:00:00+02:00",
+  "type": "image",
+  "title": "aurélie editorial hero",
+  "assets": [
+   "assets/ed_e.jpg"
+  ],
+  "caption": "editorial beauty, ein modell das es nie gab, licht gefangen im haar.\n\nkein casting, keine gage, kein retusche-marathon. so demokratisiert sich grade magazin-qualität, und genau das verkaufe ich an marken die groß aussehen wollen ohne großes budget.\n\nkommentiere EDITORIAL, und ich zeig dir wie dein look aussehen würde.\n\n(ki-erstellt)\n#aieditorial #beautyeditorial #aimodel #editorial #aicreative #beautymarketing",
+  "approved": true,
+  "posted": false
+ },
+ {
   "id": 2,
-  "datetime": "2026-06-30T08:00:00+02:00",
+  "datetime": "2026-07-01T08:00:00+02:00",
   "type": "carousel",
   "title": "good vs bad ai",
   "assets": [
@@ -38,49 +50,13 @@
  },
  {
   "id": 3,
-  "datetime": "2026-06-30T13:00:00+02:00",
+  "datetime": "2026-07-01T13:00:00+02:00",
   "type": "image",
   "title": "gisou , bottled in light",
   "assets": [
    "assets/ed_b.jpg"
   ],
   "caption": "eine produkt-ad. kein studio, kein fotograf, kein set. ein nachmittag mit ki.\n\ndas hier ist gisou, einfach weil jeder die flasche kennt. genau so könnte deine marke im feed stehen, in licht inszeniert, ohne dass jemand eine kamera anfasst.\n\nkommentiere LICHT, und ich bau dir einen frame mit deinem produkt.\n\n(ki-konzept, keine offizielle gisou-kampagne)\n#aiproductphotography #produktfotografie #beautyads #haircare #aicreative #ecommercedeutschland",
-  "approved": true,
-  "posted": false
- },
- {
-  "id": 4,
-  "datetime": "2026-06-30T18:00:00+02:00",
-  "type": "image",
-  "title": "aurélie editorial hero",
-  "assets": [
-   "assets/ed_e.jpg"
-  ],
-  "caption": "editorial beauty, ein modell das es nie gab, licht gefangen im haar.\n\nkein casting, keine gage, kein retusche-marathon. so demokratisiert sich grade magazin-qualität, und genau das verkaufe ich an marken die groß aussehen wollen ohne großes budget.\n\nkommentiere EDITORIAL, und ich zeig dir wie dein look aussehen würde.\n\n(ki-erstellt)\n#aieditorial #beautyeditorial #aimodel #editorial #aicreative #beautymarketing",
-  "approved": true,
-  "posted": false
- },
- {
-  "id": 5,
-  "datetime": "2026-07-01T08:00:00+02:00",
-  "type": "image",
-  "title": "behind the workflow , prompt to result",
-  "assets": [
-   "assets/ed_f.jpg"
-  ],
-  "caption": "warum sieht das eine ki-bild glaubwürdig aus und das andere billig? der prompt.\n\n„visible pores, peach fuzz, shot on phone, no airbrush\", genau diese wörter machen den unterschied zwischen fake und echt. das ist die arbeit hinter einem guten frame.\n\nspeichern für später. kommentiere PROMPT, wenn ich meine komplette formel mal zeigen soll.\n\n(ki-konzept)\n#promptengineering #aiworkflow #behindthescenes #aicreative #contentcreation #aibeauty",
-  "approved": true,
-  "posted": false
- },
- {
-  "id": 6,
-  "datetime": "2026-07-01T13:00:00+02:00",
-  "type": "image",
-  "title": "gisou , eine ad drei minuten",
-  "assets": [
-   "assets/ed_c.jpg"
-  ],
-  "caption": "travertin, warmes fensterlicht, ein tropfen am glas. drei minuten, null studio.\n\nder unterschied zwischen „ki-look\" und editorial ist nur eins: lichtführung. daran arbeite ich, bis die ad aussieht wie eine fünfstellige kampagne.\n\nkommentiere AD, und ich schick dir, wie so ein still für deine marke entsteht.\n\n(ki-konzept)\n#aiproductshot #editorial #beautyads #aicreative #d2cbeauty #produktfotografie",
   "approved": true,
   "posted": false
  },
@@ -93,6 +69,30 @@
    "assets/ed_d.jpg"
   ],
   "caption": "der eine frame, der die ganze ad verkauft.\n\nmakro, 100mm-look, der tropfen kurz vorm fall. das sind die momente, an denen leute beim scrollen hängen bleiben. ein detail, komplett mit ki.\n\nkommentiere DROP, wenn du sowas für dein produkt willst.\n\n(ki-generiert)\n#macro #produktfotografie #aibeauty #detailshot #satisfying #aicreative",
+  "approved": true,
+  "posted": false
+ },
+ {
+  "id": 5,
+  "datetime": "2026-07-02T08:00:00+02:00",
+  "type": "image",
+  "title": "behind the workflow , prompt to result",
+  "assets": [
+   "assets/ed_f.jpg"
+  ],
+  "caption": "warum sieht das eine ki-bild glaubwürdig aus und das andere billig? der prompt.\n\n„visible pores, peach fuzz, shot on phone, no airbrush\", genau diese wörter machen den unterschied zwischen fake und echt. das ist die arbeit hinter einem guten frame.\n\nspeichern für später. kommentiere PROMPT, wenn ich meine komplette formel mal zeigen soll.\n\n(ki-konzept)\n#promptengineering #aiworkflow #behindthescenes #aicreative #contentcreation #aibeauty",
+  "approved": true,
+  "posted": false
+ },
+ {
+  "id": 6,
+  "datetime": "2026-07-02T13:00:00+02:00",
+  "type": "image",
+  "title": "gisou , eine ad drei minuten",
+  "assets": [
+   "assets/ed_c.jpg"
+  ],
+  "caption": "travertin, warmes fensterlicht, ein tropfen am glas. drei minuten, null studio.\n\nder unterschied zwischen „ki-look\" und editorial ist nur eins: lichtführung. daran arbeite ich, bis die ad aussieht wie eine fünfstellige kampagne.\n\nkommentiere AD, und ich schick dir, wie so ein still für deine marke entsteht.\n\n(ki-konzept)\n#aiproductshot #editorial #beautyads #aicreative #d2cbeauty #produktfotografie",
   "approved": true,
   "posted": false
  }
