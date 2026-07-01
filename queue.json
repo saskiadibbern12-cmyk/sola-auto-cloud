@@ -322,6 +322,22 @@
   "posted": false
  },
  {
+  "id": 32,
+  "datetime": "2026-07-08T08:00:00+02:00",
+  "type": "carousel",
+  "title": "3 tells dass eine beauty-ad billig wirkt",
+  "assets": [
+   "assets/wc32_1.jpg",
+   "assets/wc32_2.jpg",
+   "assets/wc32_3.jpg",
+   "assets/wc32_4.jpg",
+   "assets/wc32_5.jpg"
+  ],
+  "caption": "woran erkennst du, dass eine beauty-ad billig gebaut ist?\n\nswipe für die 3 tells: überzogener hdr-glow, plastikhaut, steife pose. wenn du die kennst, siehst du sofort was einer ad fehlt.\n\nspeichern fürs nächste briefing. kommentiere TELLS, und ich zeig dir worauf ich bei deiner kategorie achte.\n\n(alle bilder mit ki erstellt)\n#aibeauty #produktfotografie #beautyeditorial #kiwerbung #aicreative #d2cmarketing",
+  "approved": true,
+  "posted": false
+ },
+ {
   "id": 24,
   "datetime": "2026-07-08T13:00:00+02:00",
   "type": "reel",
@@ -342,6 +358,22 @@
    "assets/r25.mp4"
   ],
   "caption": "eine ad. drei minuten. null studio.\n\ndieser duft-frame ist komplett mit ki, licht, rauch, glas. genau so könnte deine marke im feed stehen.\n\nkommentiere LICHT, und ich schick dir wie so ein still entsteht.\n\n(ki-konzept)\n#aiads #fragrance #produktfotografie #aicreative #beautyads #kiwerbung",
+  "approved": true,
+  "posted": false
+ },
+ {
+  "id": 33,
+  "datetime": "2026-07-09T08:00:00+02:00",
+  "type": "carousel",
+  "title": "3 ki-mythen die dich kunden kosten",
+  "assets": [
+   "assets/wc33_1.jpg",
+   "assets/wc33_2.jpg",
+   "assets/wc33_3.jpg",
+   "assets/wc33_4.jpg",
+   "assets/wc33_5.jpg"
+  ],
+  "caption": "drei sätze, die ich ständig höre, und warum sie falsch sind.\n\ndie ki sieht immer fake aus, sie ist seelenlos, sie trifft keine marke. swipe, wie ich jeden davon kontere. der unterschied ist nie das tool, sondern die art-direction.\n\nkommentiere MYTHOS, wenn du wissen willst wie deine marke echt aussieht mit ki.\n\n(ki-konzept)\n#aibeauty #aicreative #kiwerbung #marketingdeutschland #beautyeditorial #contentstrategie",
   "approved": true,
   "posted": false
  },
@@ -370,6 +402,22 @@
   "posted": false
  },
  {
+  "id": 34,
+  "datetime": "2026-07-10T08:00:00+02:00",
+  "type": "carousel",
+  "title": "4 dinge die ich checke bevor ich generiere",
+  "assets": [
+   "assets/wc34_1.jpg",
+   "assets/wc34_2.jpg",
+   "assets/wc34_3.jpg",
+   "assets/wc34_4.jpg",
+   "assets/wc34_5.jpg"
+  ],
+  "caption": "warum sehen die meisten ki-ads beliebig aus? weil vier dinge fehlen.\n\nbrand-dna, ein echtes referenzbild, klares licht, eine story. genau die checke ich, bevor ich überhaupt generiere. swipe für die kurzfassung.\n\nspeichern. kommentiere CHECK, und ich schick dir meine komplette checkliste.\n\n(ki-konzept)\n#promptengineering #aiworkflow #aicreative #produktfotografie #behindthescenes #aibeauty",
+  "approved": true,
+  "posted": false
+ },
+ {
   "id": 28,
   "datetime": "2026-07-10T13:00:00+02:00",
   "type": "reel",
@@ -390,6 +438,22 @@
    "assets/r29.mp4"
   ],
   "caption": "so sieht candy-beauty aus, wenn das licht stimmt.\n\nvoll rosa, glossy, komplett mit ki. die farbe die im feed hängen bleibt.\n\nkommentiere FARBE, und ich zeig dir deinen look.\n\n(ki-erstellt)\n#aibeauty #candyaesthetic #produktfotografie #aicreative #beautyads #colorful",
+  "approved": true,
+  "posted": false
+ },
+ {
+  "id": 35,
+  "datetime": "2026-07-11T08:00:00+02:00",
+  "type": "carousel",
+  "title": "vom moodboard zur fertigen ad",
+  "assets": [
+   "assets/wc35_1.jpg",
+   "assets/wc35_2.jpg",
+   "assets/wc35_3.jpg",
+   "assets/wc35_4.jpg",
+   "assets/wc35_5.jpg"
+  ],
+  "caption": "so wird aus einem moodboard eine fertige ad, in drei schritten.\n\nerst die welt (farben, materialien), dann der anker (ein referenzbild), dann der frame (licht, prompt, grade). swipe für den ganzen weg.\n\nkommentiere MOOD, und ich bau dir ein board für deine marke.\n\n(ki-konzept)\n#aiworkflow #moodboard #aicreative #produktfotografie #behindthecraft #beautymarketing",
   "approved": true,
   "posted": false
  },
