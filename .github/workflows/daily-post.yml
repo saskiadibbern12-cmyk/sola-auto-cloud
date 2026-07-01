@@ -2,10 +2,14 @@ name: SOLA Instagram Auto-Post
 
 on:
   schedule:
-    # Zeiten in UTC. CEST (Sommer) = UTC+2. 3 Slots täglich: 08:00 / 13:00 / 18:00 CEST.
-    - cron: '0 6 * * *'    # 08:00 CEST  (Slot A , Wert/Hook)
-    - cron: '0 11 * * *'   # 13:00 CEST  (Slot B , Produkt-Hero)
-    - cron: '0 16 * * *'   # 18:00 CEST  (Slot C , Mood/Editorial)
+    # UTC. CEST=UTC+2. 6 Laeufe/Tag: je Slot + Catch-up ~3h spaeter, off-peak Minute :09 gegen GitHub-Cron-Stau.
+    # Poster postet den AELTESTEN faelligen Post (ein Post/Lauf) -> ein Catch-up holt einen verpassten Slot auf.
+    - cron: '9 6 * * *'    # ~08:09 CEST  Slot A (Wert/Hook)
+    - cron: '9 9 * * *'    # ~11:09 CEST  Catch-up A
+    - cron: '9 11 * * *'   # ~13:09 CEST  Slot B (Produkt-Hero)
+    - cron: '9 14 * * *'   # ~16:09 CEST  Catch-up B
+    - cron: '9 16 * * *'   # ~18:09 CEST  Slot C (Mood/Editorial)
+    - cron: '9 20 * * *'   # ~22:09 CEST  Catch-up C
   workflow_dispatch:
     inputs:
       force_id:

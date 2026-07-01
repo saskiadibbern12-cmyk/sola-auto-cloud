@@ -128,10 +128,16 @@ def main():
         if not due:
             print(f"❌ FORCE_ID {force} nicht gefunden"); raise SystemExit(1)
     else:
-        due = [q for q in queue
-               if q["approved"] and not q["posted"]
-               and datetime.fromisoformat(q["datetime"]) <= now
-               and (now - datetime.fromisoformat(q["datetime"])) <= timedelta(minutes=window)]
+        # Cron-Delay-sicher: poste den AELTESTEN faelligen (nicht geposteten) Post, EINEN pro Lauf.
+        # Kein enges Fenster mehr (GitHub-Crons kommen oft Stunden zu spaet). 2-Tage-Sanity-Cap
+        # verhindert, dass uralte verpasste Posts wiederauferstehen. Catch-up-Crons holen so verpasste
+        # Slots in Reihenfolge auf, ohne je mehrere auf einmal zu dumpen.
+        cand = [q for q in queue
+                if q["approved"] and not q["posted"]
+                and datetime.fromisoformat(q["datetime"]) <= now
+                and (now - datetime.fromisoformat(q["datetime"])) <= timedelta(days=2)]
+        cand.sort(key=lambda q: q["datetime"])
+        due = cand[:1]
 
     if not due:
         print("nichts faellig. ok."); return
