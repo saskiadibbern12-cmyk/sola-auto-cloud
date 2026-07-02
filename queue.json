@@ -95,7 +95,7 @@
   "caption": "warum sieht das eine ki-bild glaubwürdig aus und das andere billig? der prompt.\n\n„visible pores, peach fuzz, shot on phone, no airbrush\", genau diese wörter machen den unterschied zwischen fake und echt. das ist die arbeit hinter einem guten frame.\n\nspeichern für später. kommentiere PROMPT, wenn ich meine komplette formel mal zeigen soll.\n\n(ki-konzept)\n#promptengineering #aiworkflow #behindthescenes #aicreative #contentcreation #aibeauty",
   "approved": true,
   "posted": false,
-  "error": "Graph POST 17841415310956725/media -> HTTP 400: {\"error\":{\"message\":\"Error validating access token: The session has been invalidated because the user changed their password or Facebook has changed the session for security reasons.\",\"type\":\"OAuthException\",\"code\":190,\"error_subcode\":0,\"fbtrace_id\":\"A4_d6yhgtK05_c0229riurI\"}}"
+  "error": "Graph POST 17841415310956725/media -> HTTP 400: {\"error\":{\"message\":\"Error validating access token: The session has been invalidated because the user changed their password or Facebook has changed the session for security reasons.\",\"type\":\"OAuthException\",\"code\":190,\"error_subcode\":0,\"fbtrace_id\":\"Am8W04Ugkjsr1pd72r7CSWq\"}}"
  },
  {
   "id": 6,
